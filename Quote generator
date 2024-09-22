@@ -1,0 +1,22 @@
+[
+    {
+        "id": "592517f5fea55667",
+        "type": "function",
+        "z": "3c0ec96022630823",
+        "name": "function 3",
+        "func": "// Get the category from the incoming message payload\nlet category = msg.payload;\n\n// Define the base URL for the API request\nlet baseURL = \"https://api.api-ninjas.com/v1/quotes\";\n\n// Construct the final URL with the selected category\nlet finalURL = `${baseURL}?category=${category}`;\n\n// Set the URL and headers for the HTTP request\nmsg.url = finalURL;\nmsg.headers = {\n    \"X-Api-Key\": \"+P2ACF2amNNGfPmJnrNw7Q==vI07a42uLxq17qNb\"\n};\n\n// Return the modified message object\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "178fa5c89819340e"
+            ]
+        ]
+    }
+]
